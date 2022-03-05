@@ -1,5 +1,74 @@
 # CGI / Common Gateway Interface
 
+-------------------------------------------------------------
+
+O que é o CGI(common gateway interface) e o que ele faz?
+CGI(Common Gateway Interface) é uma tecnologia que permite gerar páginas dinâmicas com interação entre scripts de Servidores HTTP com Gateway Scripts e Programas através de parâmetros. Sendo assim Scripts CGI são os pequenos programas que interpretam esses parâmetros e geram uma página depois de os processar.
+
+Porém o uso do CGI não é muito seguro, tendo em mente que é preciso tomar algumas precauções de seguranças. Logo abaixo será discutido sobre que precauções de segurança tomar baseado em algumas regras dos programas CGI após a explicação de como o CGI funciona.
+
+Como funciona?
+Exemplo:
+
+O CLIENTE(Browser) solicita uma URL ao SERVIDOR
+A URL solicitada é referente a um CGI, portanto o SERVIDOR executa o CGI
+o CGI trabalha interagindo com outras aplicações do sistema, recupera dados destas aplicações e retorna o resultado ao SERVIDOR
+O SERVIDOR envia os dados para o CLIENTE, que formata o resultado e apresenta ao usuário
+inserir a descrição da imagem aqui
+
+Para que usar CGI?
+Com o CGI, seu servidor pode acessar informações que não estão de uma forma legível para o cliente (ex. SQL database), e age como gateway entre ambos para produzir alguma coisa que o cliente possa usar. Gateways podem ser usadas para uma variedade de propositos, os mais comuns são manipulação de ISINDEX e requisição de formulário para HTTP.
+
+Exemplos do uso de CGI:
+Converter páginas de manual de sistemas para HTML e enviar o resultado HTML para o cliente.
+Fazer interface com WAIS e banco de dados archie, convertendo os resultados para HTML e enviando o resultado para o cliente.
+Permitir ao usuário realimentar seu servidor atraves de um formulário HTML e um decodificador acompanhando o CGI.
+Você pode estar escrevendo estes CGI's através de gateways que podem ser escritos em qualquer liguagem que permita ser executado no sistema, tais como:
+
+C/C++
+Fortran
+Perl
+TCL
+Unix Shell
+Visual Basic
+Apple Script
+Quais são as principais regras dos programas CGI?
+Programas CGI, ou scripts, são programas executáveis que podem ser executados por si mesmo (o que não é uma maneira segura). Portanto existem algumas precauções de segurança que necessitam ser implementadas quando utilizando programas CGI.
+
+As principais regras são:
+
+O script CGI tem que estar em um lugar determinado pelo servidor para os scripts CGI ou tem que ter um sufixo especial, que o servidor está configurado para reconhecer como um script CGI legal.
+A maioria dos sistemas armazena scripts CGI em um diretório raiz do servidor HTTP, chamado cgi-bin, que é configurado de tal forma que, somente determinados usuários de confiança, possam gravar nele. Isto evita problemas óbvios de segurança, que surgem ao se permitir que usuários anônimos remotos executem qualquer coisa no sistema.
+Exemplo: /usr/local/apache/htdocs/cgi-bin
+
+O script pode recolher seus parâmetros, da entrada padrão (via teclado), das variáveis de ambientes ou de ambas.
+
+O script deve dar como saída, um dos três tipos de cabeçalho padrão, como uma string de texto normal. Sendo os três tipos:
+
+CONTEXT_TYPE: O tipo de conteúdo se refere a qualquer tipo de dado MIME que seja aceito pelo servidor.
+Os tipos comuns incluem texto/html, texto/simples e dados/gif.
+Como o browser/servidor não pode deduzir este tipo de arquivo, a partir de uma localização ou sufixo de nome de arquivo, este título informará ao browser que tipo de dados esperar e como usá-lo.
+
+Formato: tipo/tipo
+
+LOCATION: Aponta para um documento em algum outro lugar do servidor.
+Permite que você redirecione pedidos para documentos, baseando-se em algum critério enviado por um formulário ou variável de ambiente.
+
+STATUS: Pode ser usado para executar um script, sem enviar uma nova página para o cliente. Também pode ser usado para enviar uma mensagem de erro ou outra informaçao para o cliente.
+
+O script deve ser executável pelo usuário que o servidor tem configurado. (Existe um usuário especial chamado "NOBODY" que é o usuário padrão para a maioria dos servidores Web. Você deve se certificar de que o usuário "NOBODY" ou o usuário para o qual o seu servidor está configurado para trabalhar, tem permissão para executar os seus scripts e ler/escrever em quaisquer arquivos que o script possa usar).
+
+Mais detalhes de Segurança em Scripts CGI
+
+Como obter informações do servidor?
+Cada vez que um usuário solicita a URL correspondente ao seu programa CGI, o servidor irá executá-lo em tempo real. Um conceito errado sobre CGI é que você pode enviar linhas de comandos opcionais e argumentos para seu programa, tal como:
+
+command% myprog -qa blorf
+
+CGI utiliza a linha de comando para outros propositos. Gateway usa variaveis de ambiente para enviar ao programa seus parametros.
+
+-------------------------------------------------------------
+
 CGI (sigla em inglês para Common Gateway Interface), em português , Interface Comum de Porta de entrada.
 
 Interface: elemento que proporciona uma ligação física ou lógica entre dois sistemas ou partes de um sistema que não poderiam ser conectados diretamente.
