@@ -16,6 +16,8 @@ CGI - Common Gateway Interface = https://web.fe.up.pt/~goii2000/M9/cgi.htm
 
 IBM Environment variables in CGI script (reference) = https://www.ibm.com/docs/pt-br/netcoolomnibus/8.1?topic=SSSHTQ_8.1.0/com.ibm.netcool_OMNIbus.doc_8.1.0/webtop/wip/reference/web_cust_envvariablesincgiscripts.html
 
+CGI - Linguagem Tcl/Tk = http://www.c2o.pro.br/automacao/ar01s14.html
+
 -------------------------------------------------------------
 
 
