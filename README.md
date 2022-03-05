@@ -67,6 +67,65 @@ command% myprog -qa blorf
 
 CGI utiliza a linha de comando para outros propositos. Gateway usa variaveis de ambiente para enviar ao programa seus parametros.
 
+Como enviar documentos para o usuário?
+Programas CGI podem retornar um grande número de tipos de documentos. Podem retornar uma imagem ao usuário, um documento HTML, ou talvez um clip de áudio. Podem também referenciar outros documentos.
+
+O cliente necessita saber que tipo de documento receberá, para que possa apresentá-lo de maneira adequada. Logo o programa CGI deve informar ao servidor que tipo de documento está sendo enviado.
+
+De forma a comunicar ao servidor o tipo de documento que está retornando, se é um documento completo ou uma referência para outro, CGI requer um pequeno cabeçalho na saída. Este cabeçalho é um texto ASCII, consistindo de linhas separadas ou por linefeeds ou por carriage returns (ou por ambos) seguidos de uma linha em branco.
+
+Exemplo:
+
+Um documento completo com o tipo MIME correspondente.
+Enviando um documento HTML para o cliente.
+
+Content-type: text/html
+
+<html>
+<head>
+    <title>saída HTML de um script CGI</title>
+</head>
+<body>
+    <h1>Saída de exemplo</h1>
+    O que você acha <strong>disso?</strong>
+</body>
+</html>
+Uma referência a outro documento.
+
+Content-type: text/html
+Location: gopher://httprules.foobar.org/0
+
+<html>
+<head>
+    <title>Desculpe...moveu-se</title>
+</head>
+<body>
+    <h1>Ir para vez do Gopher</h1>
+    Agora disponível em
+    <a href="gopher://httprules.foobar.org/0">uma nova localização</a> no nosso servidor do Gopher.
+</body>
+</html>
+Como construir um formulário?
+Um formulário pode ser criado dentro de uma página html usando a tag FORM. Uma página pode conter vários formulários, mas os formulários não podem estar contidos uns nos outros.
+
+<form method="Método GET ou POST" action="A URL">...</form>
+Onde o ACTION é a URL do servidor que receberá os dados do formulário (isto é, é o endereço do programa CGI responsável pelo tratamento dos dados) e METHOD é a forma como os dados serão passados para o programa CGI.
+
+Um formulário pode conter vários componentes, como inputs, check boxes e radio.
+
+Como obter os dados do formulário?
+Existem dois métodos que podem ser usados para acessar os formulários, GET e POST. Dependendo do método utilizado, você receberá os dados de maneira diferente.
+
+O método GET: Se o seu formulário usa method="GET", seu programa CGI receberá os dados codificados na variável de ambiente QUERY_STRING.
+Exemplo:
+
+<form method="GET" action="get-query.cgi">
+    Login: <input type="text" name="login" />
+    Senha: <input type="text" name="senha" />
+    <input type="submit" value="Enviar" />
+</form>
+
+
 -------------------------------------------------------------
 
 CGI (sigla em inglês para Common Gateway Interface), em português , Interface Comum de Porta de entrada.
