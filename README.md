@@ -184,7 +184,7 @@ http://homepages.dcc.ufmg.br/~mlbc/cursos/internet/cgi/intro.htm
 
 -------------------------------------------------------------
 
-# CGI (sigla em inglês para Common Gateway Interface), em português , Interface Comum de Porta de entrada.
+# CGI (sigla em inglês para Common Gateway Interface), em português, Interface Comum de Porta de entrada.
 
 Interface: elemento que proporciona uma ligação física ou lógica entre dois sistemas ou partes de um sistema que não poderiam ser conectados diretamente.
 
