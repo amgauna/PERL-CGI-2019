@@ -2,6 +2,21 @@
 
 -------------------------------------------------------------
 
+O que é CGI = https://homepages.dcc.ufmg.br/~mlbc/cursos/internet/cgi/intro.htm
+
+CGI Servindo páginas web (html) = http://devfuria.com.br/miscellaneous/cgi-common-gateway-interface/
+
+O que é CGI / Formatando formulários CGI = http://penta.ufrgs.br/edu/forms/cgi.html
+
+CGI Recursos Aançados em Java e JavaScript = http://penta.ufrgs.br/pesquisa/joice/cap4.html
+
+CGI Realmente Fácil / Escrevendo scripts CGI para processar formularios na Web = https://www.jmarshall.com/easy/cgi/portuguese/
+
+CGI - Common Gateway Interface = https://web.fe.up.pt/~goii2000/M9/cgi.htm
+
+-------------------------------------------------------------
+
+
 O que é o CGI(common gateway interface) e o que ele faz?
 CGI(Common Gateway Interface) é uma tecnologia que permite gerar páginas dinâmicas com interação entre scripts de Servidores HTTP com Gateway Scripts e Programas através de parâmetros. Sendo assim Scripts CGI são os pequenos programas que interpretam esses parâmetros e geram uma página depois de os processar.
 
