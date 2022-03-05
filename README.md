@@ -125,6 +125,16 @@ Exemplo:
     <input type="submit" value="Enviar" />
 </form>
 
+O método POST: Se o seu formulário usa method="POST", seu programa CGI receberá os dados da entrada padrão stdin. O servidor NÃO enviará um EOF ao término dos dados. Ao invés disso você terá que usar a variável de ambiente CONTENT_LENGTH para determinar a quantidade de dados a serem lidos de stdin.
+
+Exemplo:
+
+<form method="POST" action="post-query.cgi">
+    Login: <input type="text" name="login" />
+    Senha: <input type="text" name="senha" />
+    <input type="submit" value="Enviar" />
+</form>
+
 
 -------------------------------------------------------------
 
