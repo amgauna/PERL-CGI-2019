@@ -18,8 +18,17 @@ IBM Environment variables in CGI script (reference) = https://www.ibm.com/docs/p
 
 CGI - Linguagem Tcl/Tk = http://www.c2o.pro.br/automacao/ar01s14.html
 
--------------------------------------------------------------
+CGI Formulários = http://penta.ufrgs.br/edu/forms/cgi.html
 
+CGI Tutorial = https://www.w3.org/CGI/
+
+Common Gateway Interface (CGI) = https://en.wikipedia.org/wiki/Common_Gateway_Interface
+
+CGI (Wikipedia) = https://pt.wikipedia.org/wiki/CGI
+
+CGI Introdução = http://homepages.dcc.ufmg.br/~mlbc/cursos/internet/cgi/intro.htm
+
+-------------------------------------------------------------
 
 O que é o CGI(common gateway interface) e o que ele faz?
 CGI(Common Gateway Interface) é uma tecnologia que permite gerar páginas dinâmicas com interação entre scripts de Servidores HTTP com Gateway Scripts e Programas através de parâmetros. Sendo assim Scripts CGI são os pequenos programas que interpretam esses parâmetros e geram uma página depois de os processar.
@@ -170,18 +179,6 @@ PSGI: É uma interface entre servidores web e Aplicações web PERL e Frameworks
 Rack: Fornece uma interface modular e adaptável para o desenvolvimento de aplicações web em Ruby.
 
 WRB: Tecnologia de servidor HTTP similar ao CGI distribuído pela Oracle.
-
-Fontes:
-
-http://penta.ufrgs.br/edu/forms/cgi.html
-
-https://www.w3.org/CGI/
-
-https://en.wikipedia.org/wiki/Common_Gateway_Interface
-
-https://pt.wikipedia.org/wiki/CGI
-
-http://homepages.dcc.ufmg.br/~mlbc/cursos/internet/cgi/intro.htm
 
 
 -------------------------------------------------------------
