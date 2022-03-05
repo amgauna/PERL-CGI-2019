@@ -1,4 +1,4 @@
-# PERL / CGI
+# PERL / CGI-BIN
 
 * Active PERL Instalação no Windows = https://www.activestate.com/activeperl
 * Tutorial PERL = https://www.tutorialspoint.com/perl/index.htm
