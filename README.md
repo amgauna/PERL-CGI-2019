@@ -1,2 +1,3 @@
-# CGI
-script CGI
+# CGI 
+
+exemplos de script CGI
