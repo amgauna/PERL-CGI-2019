@@ -1,3 +1,41 @@
+# PERL / CGI
+
+* Active PERL Instalação no Windows = https://www.activestate.com/activeperl
+* Tutorial PERL = https://www.tutorialspoint.com/perl/index.htm
+* Tutorial PERL = https://www.perltutorial.org/
+
+-------------------------------------------------
+
+# PERL - Instalação no Unix / Linux
+
+#### esta primeira e segunda linhas são apenas sugestões para instalação
+
+mkdir /usr/src/temp  
+
+cd /usr/src/temp
+
+</code>
+
+#### copie neste diretório o arquivo stable.tar.gzip;
+
+gzip ´d stable.tar.gzip
+
+tar xvl stable.tar
+
+cd perl-5.6.0
+
+rm -f config.sh Policy.sh
+
+sh Configure -de
+
+make
+
+make test
+
+make install
+
+----------------------------------------------------------
+
 # CGI / Common Gateway Interface
 
 -------------------------------------------------------------
