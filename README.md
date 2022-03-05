@@ -1,6 +1,5 @@
-# CGI 
+# CGI / Common Gateway Interface
 
-Common Gateway Interface
 CGI (sigla em inglês para Common Gateway Interface), em português , Interface Comum de Porta de entrada.
 
 Interface: elemento que proporciona uma ligação física ou lógica entre dois sistemas ou partes de um sistema que não poderiam ser conectados diretamente.
