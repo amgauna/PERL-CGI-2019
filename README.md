@@ -135,10 +135,39 @@ Exemplo:
     <input type="submit" value="Enviar" />
 </form>
 
+Como fazer para ler uma variável de ambiente dependerá do Sistema Operacional em que o programa CGI será executado e da linguagem de programação em que foi escrito. Um programa C rodando em UNIX pode usar a função char *getenv(const char *name); que recebe o nome da variável como argumento e retorna o seu valor em um string.
+
+É uma tecnologia antiga?
+O CGI foi concebido como o culminar de discussões por especialistas durante os primórdios da Internet, em 1993 pela NSCA(National Center for Supercomputing Applications) nomeadamente entre Rob McCool, John Franks, Ari Luotonen, George Phillips e Tony Sanders. O que pode fazer dela ser considerada uma tecnologia antiga.
+
+Especificação do CGI 1.1: RFC3875
+
+Embora a linguagem tipicamente associada aos CGI seja o Perl, o CGI foi concebido de forma a ser independente da linguagem utilizada. Atualmente tecnologias como ASP.NET, PHP, Python e Ruby continuam a utilizar a especificação.
+
+Existem outras alternativas a ele(quais)?
+FastCGI: É um protocolo binário para interação de interfaces de programas com um Servidor Web.
+
+PSGI: É uma interface entre servidores web e Aplicações web PERL e Frameworks que permite escrever aplicações que podem ser executados como servidores autônomos ou usando o CGI.
+Rack: Fornece uma interface modular e adaptável para o desenvolvimento de aplicações web em Ruby.
+
+WRB: Tecnologia de servidor HTTP similar ao CGI distribuído pela Oracle.
+
+Fontes:
+
+http://penta.ufrgs.br/edu/forms/cgi.html
+
+https://www.w3.org/CGI/
+
+https://en.wikipedia.org/wiki/Common_Gateway_Interface
+
+https://pt.wikipedia.org/wiki/CGI
+
+http://homepages.dcc.ufmg.br/~mlbc/cursos/internet/cgi/intro.htm
+
 
 -------------------------------------------------------------
 
-CGI (sigla em inglês para Common Gateway Interface), em português , Interface Comum de Porta de entrada.
+# CGI (sigla em inglês para Common Gateway Interface), em português , Interface Comum de Porta de entrada.
 
 Interface: elemento que proporciona uma ligação física ou lógica entre dois sistemas ou partes de um sistema que não poderiam ser conectados diretamente.
 
