@@ -1,0 +1,55 @@
+<HTML>
+<BODY BGCOLOR="#CCCCCC">
+<CENTER>
+<FONT FACE="ARIAL" SIZE="5"><B>BIGNOSEBIRD.COM's<BR>
+ALL PURPOSE / ALL FUNCTION<BR>
+FORM HANDLER</B></FONT><BR>
+<I>with auto e-mail reply</I>!
+</CENTER>
+<P>
+
+<FORM METHOD="POST" ACTION="/cgi-bin/bnbform.cgi">
+<PRE>
+ 
+ FIELDS MARKED WITH * ARE REQUIRED!
+
+ Your Name:*          <INPUT TYPE="TEXT" NAME="name" SIZE=35 MAXLENGTH=50>
+
+ Country:*            <INPUT TYPE="TEXT" NAME="country" SIZE=35 MAXLENGTH=50>
+
+ E-Mail Address:*     <INPUT TYPE="TEXT" NAME="submit_by" SIZE=35 MAXLENGTH=50>
+
+ Add to Mailing List: <INPUT TYPE="RADIO" NAME="mailing_list" VALUE="YES" CHECKED>Yes
+                      <INPUT TYPE="RADIO" NAME="mailing_list" VALUE="NO">No
+
+ Which fruit(s) do    <INPUT TYPE="CHECKBOX" NAME="grape">Grape
+    like              <INPUT TYPE="CHECKBOX" NAME="banana">Banana
+                      <INPUT TYPE="CHECKBOX" NAME="apple">Apple
+
+ How did you find us: <INPUT TYPE="TEXT" NAME="how_found" SIZE=35 MAXLENGTH=50>
+                      <INPUT TYPE="submit" VALUE="Send Mail!"><input type="reset" value=" Clear-Form">                                                         
+</PRE>
+
+<!--  SCRIPT CONFIGURATION SECTION -->
+<INPUT TYPE="HIDDEN" NAME="required" 
+    VALUE="name,country,submit_by">
+<INPUT TYPE="HIDDEN" NAME="data_order" 
+    VALUE="name,country,submit_by,mailing_list,how_found,
+           grape,banana,apple">
+<INPUT TYPE="HIDDEN" NAME="submit_to" VALUE="yourname@domain.com">
+<INPUT TYPE="HIDDEN" NAME="automessage" VALUE="mymessage">
+<INPUT TYPE="HIDDEN" NAME="outputfile" VALUE="form1">
+<INPUT TYPE="HIDDEN" NAME="countfile" VALUE="form1">
+<INPUT TYPE="HIDDEN" NAME="emailfile" VALUE="form1">
+<INPUT TYPE="HIDDEN" NAME="form_id" VALUE="My Test Form">
+<INPUT TYPE="HIDDEN" NAME="ok_url" 
+     VALUE="http://domain.com/test/thanks.html">
+<INPUT TYPE="HIDDEN" NAME="not_ok_url" 
+     VALUE="http://domain.com/test/oops.html">
+<!--  END OF SCRIPT CONFIGURATION SECTION -->
+
+</FORM>
+
+</BODY>
+</HTML>
+
